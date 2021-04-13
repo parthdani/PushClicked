@@ -9,18 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Camera } from '@ionic-native/camera/ngx';
-import { IonicStorageModule } from '@ionic/storage';
+import { CleverTap } from '@ionic-native/clevertap/ngx';
+import { Firebase } from '@ionic-native/firebase/ngx';
+//import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    IonicStorageModule.forRoot()
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule//,
+    //IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    CleverTap,
+    Firebase,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
